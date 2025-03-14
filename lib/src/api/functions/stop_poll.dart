@@ -2,7 +2,8 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Stops a poll
+/// Stops a poll. A poll in a message can be stopped when the message has
+/// can_be_edited flag is set
 /// Returns [Ok]
 @immutable
 class StopPoll extends TdFunction {
@@ -15,8 +16,7 @@ class StopPoll extends TdFunction {
   /// [chatId] Identifier of the chat to which the poll belongs
   final int chatId;
 
-  /// [messageId] Identifier of the message containing the poll. Use
-  /// messageProperties.can_be_edited to check whether the poll can be stopped
+  /// [messageId] Identifier of the message containing the poll
   final int messageId;
 
   /// [replyMarkup] The new message reply markup; pass null if none; for bots

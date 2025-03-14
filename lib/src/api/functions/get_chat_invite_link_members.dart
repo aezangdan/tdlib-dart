@@ -11,7 +11,6 @@ class GetChatInviteLinkMembers extends TdFunction {
   const GetChatInviteLinkMembers({
     required this.chatId,
     required this.inviteLink,
-    required this.onlyWithExpiredSubscription,
     this.offsetMember,
     required this.limit,
   });
@@ -21,10 +20,6 @@ class GetChatInviteLinkMembers extends TdFunction {
 
   /// [inviteLink] Invite link for which to return chat members
   final String inviteLink;
-
-  /// [onlyWithExpiredSubscription] Pass true if the link is a subscription link
-  /// and only members with expired subscription must be returned
-  final bool onlyWithExpiredSubscription;
 
   /// [offsetMember] A chat member from which to return next chat members; pass
   /// null to get results from the beginning
@@ -42,7 +37,6 @@ class GetChatInviteLinkMembers extends TdFunction {
   Map<String, dynamic> toJson() => <String, dynamic>{
         'chat_id': chatId,
         'invite_link': inviteLink,
-        'only_with_expired_subscription': onlyWithExpiredSubscription,
         'offset_member': offsetMember?.toJson(),
         'limit': limit,
         '@type': constructor,

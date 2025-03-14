@@ -16,7 +16,7 @@ class ReportChatSponsoredMessageResultOptionRequired
   final String title;
 
   /// [options] List of available options
-  final List<ReportOption> options;
+  final List<ReportChatSponsoredMessageOption> options;
 
   static const String constructor =
       'reportChatSponsoredMessageResultOptionRequired';
@@ -29,9 +29,9 @@ class ReportChatSponsoredMessageResultOptionRequired
 
     return ReportChatSponsoredMessageResultOptionRequired(
       title: json['title'] as String,
-      options: List<ReportOption>.from(
+      options: List<ReportChatSponsoredMessageOption>.from(
           ((json['options'] as List<dynamic>?) ?? <dynamic>[])
-              .map((item) => ReportOption.fromJson(item))
+              .map((item) => ReportChatSponsoredMessageOption.fromJson(item))
               .toList()),
     );
   }

@@ -14,9 +14,8 @@ class InputStoryAreaTypeMessage extends InputStoryAreaType {
   /// be a supergroup or a channel chat
   final int chatId;
 
-  /// [messageId] Identifier of the message. Use
-  /// messageProperties.can_be_shared_in_story to check whether the message is
-  /// suitable
+  /// [messageId] Identifier of the message. Only successfully sent
+  /// non-scheduled messages can be specified
   final int messageId;
 
   static const String constructor = 'inputStoryAreaTypeMessage';

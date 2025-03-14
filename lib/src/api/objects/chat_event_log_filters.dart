@@ -19,7 +19,6 @@ class ChatEventLogFilters extends TdObject {
     required this.inviteLinkChanges,
     required this.videoChatChanges,
     required this.forumChanges,
-    required this.subscriptionExtensions,
   });
 
   /// [messageEdits] True, if message edits need to be returned
@@ -63,10 +62,6 @@ class ChatEventLogFilters extends TdObject {
   /// [forumChanges] True, if forum-related actions need to be returned
   final bool forumChanges;
 
-  /// [subscriptionExtensions] True, if subscription extensions need to be
-  /// returned
-  final bool subscriptionExtensions;
-
   static const String constructor = 'chatEventLogFilters';
 
   static ChatEventLogFilters? fromJson(Map<String, dynamic>? json) {
@@ -88,7 +83,6 @@ class ChatEventLogFilters extends TdObject {
       inviteLinkChanges: json['invite_link_changes'] as bool,
       videoChatChanges: json['video_chat_changes'] as bool,
       forumChanges: json['forum_changes'] as bool,
-      subscriptionExtensions: json['subscription_extensions'] as bool,
     );
   }
 
@@ -110,7 +104,6 @@ class ChatEventLogFilters extends TdObject {
         'invite_link_changes': inviteLinkChanges,
         'video_chat_changes': videoChatChanges,
         'forum_changes': forumChanges,
-        'subscription_extensions': subscriptionExtensions,
         '@type': constructor,
       };
 

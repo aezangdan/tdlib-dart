@@ -17,8 +17,7 @@ class ReportSupergroupAntiSpamFalsePositive extends TdFunction {
   /// [supergroupId] Supergroup identifier
   final int supergroupId;
 
-  /// [messageId] Identifier of the erroneously deleted message from
-  /// chatEventMessageDeleted
+  /// [messageId] Identifier of the erroneously deleted message
   final int messageId;
 
   static const String constructor = 'reportSupergroupAntiSpamFalsePositive';

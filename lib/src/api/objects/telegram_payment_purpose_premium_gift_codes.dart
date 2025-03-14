@@ -11,7 +11,6 @@ class TelegramPaymentPurposePremiumGiftCodes extends TelegramPaymentPurpose {
     required this.amount,
     required this.userIds,
     required this.monthCount,
-    required this.text,
   });
 
   /// [boostedChatId] Identifier of the supergroup or channel chat, which will
@@ -32,11 +31,6 @@ class TelegramPaymentPurposePremiumGiftCodes extends TelegramPaymentPurpose {
   /// active for the users
   final int monthCount;
 
-  /// [text] Text to show along with the gift codes;
-  /// 0-getOption("gift_text_length_max") characters. Only Bold, Italic,
-  /// Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
-  final FormattedText text;
-
   static const String constructor = 'telegramPaymentPurposePremiumGiftCodes';
 
   static TelegramPaymentPurposePremiumGiftCodes? fromJson(
@@ -54,7 +48,6 @@ class TelegramPaymentPurposePremiumGiftCodes extends TelegramPaymentPurpose {
               .map((item) => item)
               .toList()),
       monthCount: json['month_count'] as int,
-      text: FormattedText.fromJson(json['text'] as Map<String, dynamic>?)!,
     );
   }
 
@@ -68,7 +61,6 @@ class TelegramPaymentPurposePremiumGiftCodes extends TelegramPaymentPurpose {
         'amount': amount,
         'user_ids': userIds.map((item) => item).toList(),
         'month_count': monthCount,
-        'text': text.toJson(),
         '@type': constructor,
       };
 

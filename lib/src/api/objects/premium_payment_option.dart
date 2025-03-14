@@ -26,8 +26,7 @@ class PremiumPaymentOption extends TdObject {
   final int discountPercentage;
 
   /// [monthCount] Number of months the Telegram Premium subscription will be
-  /// active. Use getPremiumInfoSticker to get the sticker to be used as
-  /// representation of the Telegram Premium subscription
+  /// active
   final int monthCount;
 
   /// [storeProductId] Identifier of the store product associated with the

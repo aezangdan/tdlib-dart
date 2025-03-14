@@ -16,8 +16,7 @@ class EditMessageReplyMarkup extends TdFunction {
   /// [chatId] The chat the message belongs to
   final int chatId;
 
-  /// [messageId] Identifier of the message. Use messageProperties.can_be_edited
-  /// to check whether the message can be edited
+  /// [messageId] Identifier of the message
   final int messageId;
 
   /// [replyMarkup] The new message reply markup; pass null if none

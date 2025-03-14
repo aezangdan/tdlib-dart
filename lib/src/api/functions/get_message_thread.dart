@@ -3,7 +3,7 @@ import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
 /// Returns information about a message thread. Can be used only if
-/// messageProperties.can_get_message_thread == true
+/// message.can_get_message_thread == true
 /// Returns [MessageThreadInfo]
 @immutable
 class GetMessageThread extends TdFunction {

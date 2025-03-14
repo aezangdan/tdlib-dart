@@ -15,9 +15,7 @@ class DeleteMessages extends TdFunction {
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [messageIds] Identifiers of the messages to be deleted. Use
-  /// messageProperties.can_be_deleted_only_for_self and
-  /// messageProperties.can_be_deleted_for_all_users to get suitable messages
+  /// [messageIds] Identifiers of the messages to be deleted
   final List<int> messageIds;
 
   /// [revoke] Pass true to delete messages for all chat members. Always true

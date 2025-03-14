@@ -7,14 +7,10 @@ import '../tdapi.dart';
 class StoryAreaTypeLocation extends StoryAreaType {
   const StoryAreaTypeLocation({
     required this.location,
-    this.address,
   });
 
   /// [location] The location
   final Location location;
-
-  /// [address] Address of the location; may be null if unknown
-  final LocationAddress? address;
 
   static const String constructor = 'storyAreaTypeLocation';
 
@@ -25,8 +21,6 @@ class StoryAreaTypeLocation extends StoryAreaType {
 
     return StoryAreaTypeLocation(
       location: Location.fromJson(json['location'] as Map<String, dynamic>?)!,
-      address:
-          LocationAddress.fromJson(json['address'] as Map<String, dynamic>?),
     );
   }
 
@@ -36,7 +30,6 @@ class StoryAreaTypeLocation extends StoryAreaType {
   @override
   Map<String, dynamic> toJson() => <String, dynamic>{
         'location': location.toJson(),
-        'address': address?.toJson(),
         '@type': constructor,
       };
 

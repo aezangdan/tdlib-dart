@@ -2,8 +2,7 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Returns information about a newest pinned message in the chat. Returns a
-/// 404 error if the message doesn't exist
+/// Returns information about a newest pinned message in the chat
 /// Returns [Message]
 @immutable
 class GetChatPinnedMessage extends TdFunction {

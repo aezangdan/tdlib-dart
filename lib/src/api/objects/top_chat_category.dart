@@ -18,7 +18,6 @@ abstract class TopChatCategory extends TdObject {
   /// [TopChatCategoryGroups]
   /// [TopChatCategoryInlineBots]
   /// [TopChatCategoryUsers]
-  /// [TopChatCategoryWebAppBots]
   static TopChatCategory? fromJson(Map<String, dynamic>? json) {
     if (json == null) {
       return null;
@@ -39,8 +38,6 @@ abstract class TopChatCategory extends TdObject {
         return TopChatCategoryInlineBots.fromJson(json);
       case TopChatCategoryUsers.constructor:
         return TopChatCategoryUsers.fromJson(json);
-      case TopChatCategoryWebAppBots.constructor:
-        return TopChatCategoryWebAppBots.fromJson(json);
       default:
         return null;
     }

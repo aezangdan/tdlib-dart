@@ -2,17 +2,23 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Describes a message to be replied in the same chat and forum topic
+/// Describes a message to be replied
 @immutable
 class InputMessageReplyToMessage extends InputMessageReplyTo {
   const InputMessageReplyToMessage({
+    required this.chatId,
     required this.messageId,
     this.quote,
   });
 
-  /// [messageId] The identifier of the message to be replied in the same chat
-  /// and forum topic. A message can be replied in the same chat and forum topic
-  /// only if messageProperties.can_be_replied
+  /// [chatId] The identifier of the chat to which the message to be replied
+  /// belongs; pass 0 if the message to be replied is in the same chat. Must
+  /// always be 0 for replies in secret chats. A message can be replied in
+  /// another chat or topic only if message.can_be_replied_in_another_chat
+  final int chatId;
+
+  /// [messageId] The identifier of the message to be replied in the same or the
+  /// specified chat
   final int messageId;
 
   /// [quote] Quote from the message to be replied; pass null if none. Must
@@ -27,6 +33,7 @@ class InputMessageReplyToMessage extends InputMessageReplyTo {
     }
 
     return InputMessageReplyToMessage(
+      chatId: json['chat_id'] as int,
       messageId: json['message_id'] as int,
       quote: InputTextQuote.fromJson(json['quote'] as Map<String, dynamic>?),
     );
@@ -37,6 +44,7 @@ class InputMessageReplyToMessage extends InputMessageReplyTo {
 
   @override
   Map<String, dynamic> toJson() => <String, dynamic>{
+        'chat_id': chatId,
         'message_id': messageId,
         'quote': quote?.toJson(),
         '@type': constructor,

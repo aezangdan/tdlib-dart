@@ -17,14 +17,11 @@ class EditMessageSchedulingState extends TdFunction {
   /// [chatId] The chat the message belongs to
   final int chatId;
 
-  /// [messageId] Identifier of the message. Use
-  /// messageProperties.can_edit_scheduling_state to check whether the message
-  /// is suitable
+  /// [messageId] Identifier of the message
   final int messageId;
 
   /// [schedulingState] The new message scheduling state; pass null to send the
-  /// message immediately. Must be null for messages in the state
-  /// messageSchedulingStateSendWhenVideoProcessed
+  /// message immediately
   final MessageSchedulingState? schedulingState;
 
   static const String constructor = 'editMessageSchedulingState';

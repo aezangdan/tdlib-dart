@@ -14,7 +14,7 @@ class TelegramPaymentPurposePremiumGiveaway extends TelegramPaymentPurpose {
   });
 
   /// [parameters] Giveaway parameters
-  final GiveawayParameters parameters;
+  final PremiumGiveawayParameters parameters;
 
   /// [currency] ISO 4217 currency code of the payment currency
   final String currency;
@@ -39,7 +39,7 @@ class TelegramPaymentPurposePremiumGiveaway extends TelegramPaymentPurpose {
     }
 
     return TelegramPaymentPurposePremiumGiveaway(
-      parameters: GiveawayParameters.fromJson(
+      parameters: PremiumGiveawayParameters.fromJson(
           json['parameters'] as Map<String, dynamic>?)!,
       currency: json['currency'] as String,
       amount: json['amount'] as int,

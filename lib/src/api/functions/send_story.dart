@@ -14,14 +14,12 @@ class SendStory extends TdFunction {
     this.caption,
     required this.privacySettings,
     required this.activePeriod,
-    this.fromStoryFullId,
+    required this.fromStoryFullId,
     required this.isPostedToChatPage,
     required this.protectContent,
   });
 
-  /// [chatId] Identifier of the chat that will post the story. Pass Saved
-  /// Messages chat identifier when posting a story on behalf of the current
-  /// user
+  /// [chatId] Identifier of the chat that will post the story
   final int chatId;
 
   /// [content] Content of the story
@@ -46,9 +44,8 @@ class SendStory extends TdFunction {
   final int activePeriod;
 
   /// [fromStoryFullId] Full identifier of the original story, which content was
-  /// used to create the story; pass null if the story isn't repost of another
-  /// story
-  final StoryFullId? fromStoryFullId;
+  /// used to create the story
+  final StoryFullId fromStoryFullId;
 
   /// [isPostedToChatPage] Pass true to keep the story accessible after
   /// expiration
@@ -71,7 +68,7 @@ class SendStory extends TdFunction {
         'caption': caption?.toJson(),
         'privacy_settings': privacySettings.toJson(),
         'active_period': activePeriod,
-        'from_story_full_id': fromStoryFullId?.toJson(),
+        'from_story_full_id': fromStoryFullId.toJson(),
         'is_posted_to_chat_page': isPostedToChatPage,
         'protect_content': protectContent,
         '@type': constructor,
