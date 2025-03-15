@@ -14,7 +14,7 @@ class User extends TdObject {
     required this.status,
     this.profilePhoto,
     this.accentColorId,
-    required this.backgroundCustomEmojiId,
+    this.backgroundCustomEmojiId,
     required this.profileAccentColorId,
     required this.profileBackgroundCustomEmojiId,
     this.emojiStatus,
