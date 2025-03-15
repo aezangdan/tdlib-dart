@@ -194,9 +194,9 @@ class User extends TdObject {
         'profile_photo': profilePhoto?.toJson(),
         'accent_color_id': 0,
         'background_custom_emoji_id': 0,
-        'profile_accent_color_id': profileAccentColorId,
+        'profile_accent_color_id': 0,
         'profile_background_custom_emoji_id':
-            profileBackgroundCustomEmojiId.toString(),
+            0,
         'emoji_status': emojiStatus?.toJson(),
         'is_contact': isContact,
         'is_mutual_contact': isMutualContact,
