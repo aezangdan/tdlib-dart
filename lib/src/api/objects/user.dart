@@ -194,7 +194,7 @@ class User extends TdObject {
         'phone_number': phoneNumber,
         'status': status.toJson(),
         'profile_photo': profilePhoto?.toJson(),
-        'accent_color_id': accentColorId ?? 0,
+        'accent_color_id': 0,
         'background_custom_emoji_id': backgroundCustomEmojiId.toString(),
         'profile_accent_color_id': profileAccentColorId,
         'profile_background_custom_emoji_id':
