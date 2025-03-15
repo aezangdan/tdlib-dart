@@ -13,7 +13,7 @@ class User extends TdObject {
     required this.phoneNumber,
     required this.status,
     this.profilePhoto,
-    required this.accentColorId,
+    this.accentColorId,
     required this.backgroundCustomEmojiId,
     required this.profileAccentColorId,
     required this.profileBackgroundCustomEmojiId,
@@ -155,7 +155,7 @@ class User extends TdObject {
       status: UserStatus.fromJson(json['status'] as Map<String, dynamic>?)!,
       profilePhoto:
           ProfilePhoto.fromJson(json['profile_photo'] as Map<String, dynamic>?),
-      accentColorId: json['accent_color_id'] as int ?? 0,
+      accentColorId: 0,
       backgroundCustomEmojiId:
           int.tryParse(json['background_custom_emoji_id']) ?? 0,
       profileAccentColorId: json['profile_accent_color_id'] as int,
