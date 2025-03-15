@@ -157,9 +157,8 @@ class User extends TdObject {
       ProfilePhoto.fromJson(json['profile_photo'] as Map<String, dynamic>?),
       accentColorId: 0,
       backgroundCustomEmojiId:0,
-      profileAccentColorId: json['profile_accent_color_id'] as int,
-      profileBackgroundCustomEmojiId:
-      int.tryParse(json['profile_background_custom_emoji_id']) ?? 0,
+      profileAccentColorId: 0,
+      profileBackgroundCustomEmojiId: 0,
       emojiStatus:
       EmojiStatus.fromJson(json['emoji_status'] as Map<String, dynamic>?),
       isContact: json['is_contact'] as bool,
