@@ -147,7 +147,7 @@ class User extends TdObject {
     }
 
     return User(
-      id: json['id'] is int ? json['id'] as int : 0, 
+      id: json['id'] is int ? json['id'] as int : 0,
       firstName: json['first_name'] is String ? json['first_name'] as String : '',
       lastName: json['last_name'] is String ? json['last_name'] as String : '',
       usernames: json['usernames'] is Map<String, dynamic> ? Usernames.fromJson(json['usernames']) : null,
