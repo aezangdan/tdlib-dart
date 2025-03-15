@@ -156,7 +156,7 @@ class User extends TdObject {
       profilePhoto:
       ProfilePhoto.fromJson(json['profile_photo'] as Map<String, dynamic>?),
       accentColorId: 0,
-      backgroundCustomEmojiId:
+      backgroundCustomEmojiId:0
       int.tryParse(json['background_custom_emoji_id']) ?? 0,
       profileAccentColorId: json['profile_accent_color_id'] as int,
       profileBackgroundCustomEmojiId:
@@ -195,7 +195,7 @@ class User extends TdObject {
         'status': status.toJson(),
         'profile_photo': profilePhoto?.toJson(),
         'accent_color_id': 0,
-        'background_custom_emoji_id': backgroundCustomEmojiId.toString(),
+        'background_custom_emoji_id': 0,
         'profile_accent_color_id': profileAccentColorId,
         'profile_background_custom_emoji_id':
             profileBackgroundCustomEmojiId.toString(),
