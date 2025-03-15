@@ -11,8 +11,7 @@ class CanSendStory extends TdFunction {
     required this.chatId,
   });
 
-  /// [chatId] Chat identifier. Pass Saved Messages chat identifier when posting
-  /// a story on behalf of the current user
+  /// [chatId] Chat identifier
   final int chatId;
 
   static const String constructor = 'canSendStory';

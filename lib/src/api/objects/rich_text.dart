@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Describes a formatted text object
+/// Describes a text object inside an instant-view web page
 @immutable
 abstract class RichText extends TdObject {
   const RichText();

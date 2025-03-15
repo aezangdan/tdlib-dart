@@ -7,13 +7,12 @@ import '../tdapi.dart';
 @immutable
 class AuthenticationCodeTypeFirebaseAndroid extends AuthenticationCodeType {
   const AuthenticationCodeTypeFirebaseAndroid({
-    required this.deviceVerificationParameters,
+    required this.nonce,
     required this.length,
   });
 
-  /// [deviceVerificationParameters] Parameters to be used for device
-  /// verification
-  final FirebaseDeviceVerificationParameters deviceVerificationParameters;
+  /// [nonce] Nonce to pass to the SafetyNet Attestation API
+  final String nonce;
 
   /// [length] Length of the code
   final int length;
@@ -27,9 +26,7 @@ class AuthenticationCodeTypeFirebaseAndroid extends AuthenticationCodeType {
     }
 
     return AuthenticationCodeTypeFirebaseAndroid(
-      deviceVerificationParameters:
-          FirebaseDeviceVerificationParameters.fromJson(
-              json['device_verification_parameters'] as Map<String, dynamic>?)!,
+      nonce: json['nonce'] as String,
       length: json['length'] as int,
     );
   }
@@ -39,7 +36,7 @@ class AuthenticationCodeTypeFirebaseAndroid extends AuthenticationCodeType {
 
   @override
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'device_verification_parameters': deviceVerificationParameters.toJson(),
+        'nonce': nonce,
         'length': length,
         '@type': constructor,
       };

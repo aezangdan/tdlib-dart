@@ -12,7 +12,7 @@ class ToggleSupergroupJoinToSendMessages extends TdFunction {
     required this.joinToSendMessages,
   });
 
-  /// [supergroupId] Identifier of the supergroup that isn't a broadcast group
+  /// [supergroupId] Identifier of the supergroup
   final int supergroupId;
 
   /// [joinToSendMessages] New value of join_to_send_messages

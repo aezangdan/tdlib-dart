@@ -19,7 +19,6 @@ abstract class InternalLinkType extends TdObject {
   /// [InternalLinkTypeBotStartInGroup]
   /// [InternalLinkTypeBotStart]
   /// [InternalLinkTypeBusinessChat]
-  /// [InternalLinkTypeBuyStars]
   /// [InternalLinkTypeChangePhoneNumber]
   /// [InternalLinkTypeChatBoost]
   /// [InternalLinkTypeChatFolderInvite]
@@ -32,7 +31,6 @@ abstract class InternalLinkType extends TdObject {
   /// [InternalLinkTypeInvoice]
   /// [InternalLinkTypeLanguagePack]
   /// [InternalLinkTypeLanguageSettings]
-  /// [InternalLinkTypeMainWebApp]
   /// [InternalLinkTypeMessageDraft]
   /// [InternalLinkTypeMessage]
   /// [InternalLinkTypePassportDataRequest]
@@ -46,6 +44,7 @@ abstract class InternalLinkType extends TdObject {
   /// [InternalLinkTypeQrCodeAuthentication]
   /// [InternalLinkTypeRestorePurchases]
   /// [InternalLinkTypeSettings]
+  /// [InternalLinkTypeSideMenuBot]
   /// [InternalLinkTypeStickerSet]
   /// [InternalLinkTypeStory]
   /// [InternalLinkTypeThemeSettings]
@@ -78,8 +77,6 @@ abstract class InternalLinkType extends TdObject {
         return InternalLinkTypeBotStartInGroup.fromJson(json);
       case InternalLinkTypeBusinessChat.constructor:
         return InternalLinkTypeBusinessChat.fromJson(json);
-      case InternalLinkTypeBuyStars.constructor:
-        return InternalLinkTypeBuyStars.fromJson(json);
       case InternalLinkTypeChangePhoneNumber.constructor:
         return InternalLinkTypeChangePhoneNumber.fromJson(json);
       case InternalLinkTypeChatBoost.constructor:
@@ -105,8 +102,6 @@ abstract class InternalLinkType extends TdObject {
         return InternalLinkTypeLanguagePack.fromJson(json);
       case InternalLinkTypeLanguageSettings.constructor:
         return InternalLinkTypeLanguageSettings.fromJson(json);
-      case InternalLinkTypeMainWebApp.constructor:
-        return InternalLinkTypeMainWebApp.fromJson(json);
       case InternalLinkTypeMessage.constructor:
         return InternalLinkTypeMessage.fromJson(json);
       case InternalLinkTypeMessageDraft.constructor:
@@ -133,6 +128,8 @@ abstract class InternalLinkType extends TdObject {
         return InternalLinkTypeRestorePurchases.fromJson(json);
       case InternalLinkTypeSettings.constructor:
         return InternalLinkTypeSettings.fromJson(json);
+      case InternalLinkTypeSideMenuBot.constructor:
+        return InternalLinkTypeSideMenuBot.fromJson(json);
       case InternalLinkTypeStickerSet.constructor:
         return InternalLinkTypeStickerSet.fromJson(json);
       case InternalLinkTypeStory.constructor:

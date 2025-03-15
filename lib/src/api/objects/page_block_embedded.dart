@@ -16,7 +16,7 @@ class PageBlockEmbedded extends PageBlock {
     required this.allowScrolling,
   });
 
-  /// [url] URL of the embedded page, if available
+  /// [url] Web page URL, if available
   final String url;
 
   /// [html] HTML-markup of the embedded page

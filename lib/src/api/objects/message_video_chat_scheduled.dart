@@ -14,7 +14,7 @@ class MessageVideoChatScheduled extends MessageContent {
   /// through the method getGroupCall
   final int groupCallId;
 
-  /// [startDate] Point in time (Unix timestamp) when the group call is expected
+  /// [startDate] Point in time (Unix timestamp) when the group call is supposed
   /// to be started by an administrator
   final int startDate;
 

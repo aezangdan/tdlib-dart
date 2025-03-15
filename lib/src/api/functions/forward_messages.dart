@@ -31,7 +31,7 @@ class ForwardMessages extends TdFunction {
   /// [messageIds] Identifiers of the messages to forward. Message identifiers
   /// must be in a strictly increasing order. At most 100 messages can be
   /// forwarded simultaneously. A message can be forwarded only if
-  /// messageProperties.can_be_forwarded
+  /// message.can_be_forwarded
   final List<int> messageIds;
 
   /// [options] Options to be used to send the messages; pass null to use
@@ -40,9 +40,7 @@ class ForwardMessages extends TdFunction {
 
   /// [sendCopy] Pass true to copy content of the messages without reference to
   /// the original sender. Always true if the messages are forwarded to a secret
-  /// chat or are local. Use messageProperties.can_be_saved and
-  /// messageProperties.can_be_copied_to_secret_chat to check whether the
-  /// message is suitable
+  /// chat or are local
   final bool sendCopy;
 
   /// [removeCaption] Pass true to remove media captions of message copies.

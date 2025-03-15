@@ -2,9 +2,11 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Edits the media content of a message, including message caption. If only
-/// the caption needs to be edited, use editMessageCaption instead. The type
-/// of message content in an album can't be changed with exception of
+/// Edits the content of a message with an animation, an audio, a document, a
+/// photo or a video, including message caption. If only the caption needs to
+/// be edited, use editMessageCaption instead. The media can't be edited if
+/// the message was set to self-destruct or to a self-destructing media. The
+/// type of message content in an album can't be changed with exception of
 /// replacing a photo with a video or vice versa. Returns the edited message
 /// after the edit is completed on the server side
 /// Returns [Message]
@@ -20,9 +22,7 @@ class EditMessageMedia extends TdFunction {
   /// [chatId] The chat the message belongs to
   final int chatId;
 
-  /// [messageId] Identifier of the message. Use
-  /// messageProperties.can_edit_media to check whether the message can be
-  /// edited
+  /// [messageId] Identifier of the message
   final int messageId;
 
   /// [replyMarkup] The new message reply markup; pass null if none; for bots

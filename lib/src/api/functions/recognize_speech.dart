@@ -2,7 +2,9 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Recognizes speech in a video note or a voice note message
+/// Recognizes speech in a video note or a voice note message. The message
+/// must be successfully sent, must not be scheduled, and must be from a
+/// non-secret chat
 /// Returns [Ok]
 @immutable
 class RecognizeSpeech extends TdFunction {
@@ -14,9 +16,7 @@ class RecognizeSpeech extends TdFunction {
   /// [chatId] Identifier of the chat to which the message belongs
   final int chatId;
 
-  /// [messageId] Identifier of the message. Use
-  /// messageProperties.can_recognize_speech to check whether the message is
-  /// suitable
+  /// [messageId] Identifier of the message
   final int messageId;
 
   static const String constructor = 'recognizeSpeech';

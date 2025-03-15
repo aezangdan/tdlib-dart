@@ -3,7 +3,8 @@ import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
 /// Stops the preliminary uploading of a file. Supported only for files
-/// uploaded by using preliminaryUploadFile
+/// uploaded by using preliminaryUploadFile. For other files the behavior is
+/// undefined
 /// Returns [Ok]
 @immutable
 class CancelPreliminaryUploadFile extends TdFunction {

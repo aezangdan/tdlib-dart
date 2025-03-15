@@ -10,8 +10,7 @@ class SetDefaultReactionType extends TdFunction {
     required this.reactionType,
   });
 
-  /// [reactionType] New type of the default reaction. The paid reaction can't
-  /// be set as default
+  /// [reactionType] New type of the default reaction
   final ReactionType reactionType;
 
   static const String constructor = 'setDefaultReactionType';

@@ -2,8 +2,7 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Returns the last message sent in a chat no later than the specified date.
-/// Returns a 404 error if such message doesn't exist
+/// Returns the last message sent in a chat no later than the specified date
 /// Returns [Message]
 @immutable
 class GetChatMessageByDate extends TdFunction {

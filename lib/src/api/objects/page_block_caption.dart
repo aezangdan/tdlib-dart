@@ -2,7 +2,8 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Contains a caption of another block
+/// Contains a caption of an instant view web page block, consisting of a text
+/// and a trailing credit
 @immutable
 class PageBlockCaption extends TdObject {
   const PageBlockCaption({

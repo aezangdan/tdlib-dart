@@ -6,14 +6,7 @@ import '../tdapi.dart';
 /// restrictions
 @immutable
 class ChatMemberStatusMember extends ChatMemberStatus {
-  const ChatMemberStatusMember({
-    required this.memberUntilDate,
-  });
-
-  /// [memberUntilDate] Point in time (Unix timestamp) when the user will be
-  /// removed from the chat because of the expired subscription; 0 if never.
-  /// Ignored in setChatMemberStatus
-  final int memberUntilDate;
+  const ChatMemberStatusMember();
 
   static const String constructor = 'chatMemberStatusMember';
 
@@ -22,9 +15,7 @@ class ChatMemberStatusMember extends ChatMemberStatus {
       return null;
     }
 
-    return ChatMemberStatusMember(
-      memberUntilDate: json['member_until_date'] as int,
-    );
+    return const ChatMemberStatusMember();
   }
 
   @override
@@ -32,7 +23,6 @@ class ChatMemberStatusMember extends ChatMemberStatus {
 
   @override
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'member_until_date': memberUntilDate,
         '@type': constructor,
       };
 

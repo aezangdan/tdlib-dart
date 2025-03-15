@@ -40,7 +40,6 @@ abstract class ChatEventAction extends TdObject {
   /// [ChatEventMemberLeft]
   /// [ChatEventMemberPromoted]
   /// [ChatEventMemberRestricted]
-  /// [ChatEventMemberSubscriptionExtended]
   /// [ChatEventMessageAutoDeleteTimeChanged]
   /// [ChatEventMessageDeleted]
   /// [ChatEventMessageEdited]
@@ -50,7 +49,6 @@ abstract class ChatEventAction extends TdObject {
   /// [ChatEventPhotoChanged]
   /// [ChatEventPollStopped]
   /// [ChatEventProfileAccentColorChanged]
-  /// [ChatEventShowMessageSenderToggled]
   /// [ChatEventSignMessagesToggled]
   /// [ChatEventSlowModeDelayChanged]
   /// [ChatEventStickerSetChanged]
@@ -127,8 +125,6 @@ abstract class ChatEventAction extends TdObject {
         return ChatEventMemberPromoted.fromJson(json);
       case ChatEventMemberRestricted.constructor:
         return ChatEventMemberRestricted.fromJson(json);
-      case ChatEventMemberSubscriptionExtended.constructor:
-        return ChatEventMemberSubscriptionExtended.fromJson(json);
       case ChatEventMessageAutoDeleteTimeChanged.constructor:
         return ChatEventMessageAutoDeleteTimeChanged.fromJson(json);
       case ChatEventMessageDeleted.constructor:
@@ -147,8 +143,6 @@ abstract class ChatEventAction extends TdObject {
         return ChatEventPollStopped.fromJson(json);
       case ChatEventProfileAccentColorChanged.constructor:
         return ChatEventProfileAccentColorChanged.fromJson(json);
-      case ChatEventShowMessageSenderToggled.constructor:
-        return ChatEventShowMessageSenderToggled.fromJson(json);
       case ChatEventSignMessagesToggled.constructor:
         return ChatEventSignMessagesToggled.fromJson(json);
       case ChatEventSlowModeDelayChanged.constructor:

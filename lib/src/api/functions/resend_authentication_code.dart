@@ -9,12 +9,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 @immutable
 class ResendAuthenticationCode extends TdFunction {
-  const ResendAuthenticationCode({
-    this.reason,
-  });
-
-  /// [reason] Reason of code resending; pass null if unknown
-  final ResendCodeReason? reason;
+  const ResendAuthenticationCode();
 
   static const String constructor = 'resendAuthenticationCode';
 
@@ -23,7 +18,6 @@ class ResendAuthenticationCode extends TdFunction {
 
   @override
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'reason': reason?.toJson(),
         '@type': constructor,
       };
 

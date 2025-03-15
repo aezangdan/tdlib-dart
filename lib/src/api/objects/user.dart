@@ -60,7 +60,7 @@ class User extends TdObject {
   /// [accentColorId] Identifier of the accent color for name, and backgrounds
   /// of profile photo, reply header, and link preview. For Telegram Premium
   /// users only
-  final int accentColorId;
+  final int? accentColorId;
 
   /// [backgroundCustomEmojiId] Identifier of a custom emoji to be shown on the
   /// reply header and link preview background; 0 if none. For Telegram Premium
@@ -155,7 +155,7 @@ class User extends TdObject {
       status: UserStatus.fromJson(json['status'] as Map<String, dynamic>?)!,
       profilePhoto:
           ProfilePhoto.fromJson(json['profile_photo'] as Map<String, dynamic>?),
-      accentColorId: json['accent_color_id'] as int,
+      accentColorId: json['accent_color_id'] as int ?? 0,
       backgroundCustomEmojiId:
           int.tryParse(json['background_custom_emoji_id']) ?? 0,
       profileAccentColorId: json['profile_accent_color_id'] as int,
@@ -194,7 +194,7 @@ class User extends TdObject {
         'phone_number': phoneNumber,
         'status': status.toJson(),
         'profile_photo': profilePhoto?.toJson(),
-        'accent_color_id': accentColorId,
+        'accent_color_id': accentColorId ?? 0,
         'background_custom_emoji_id': backgroundCustomEmojiId.toString(),
         'profile_accent_color_id': profileAccentColorId,
         'profile_background_custom_emoji_id':

@@ -2,8 +2,7 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// The ability to use links and formatting in story caption, and use
-/// inputStoryAreaTypeLink areas
+/// The ability to use links and formatting in story caption
 @immutable
 class PremiumStoryFeatureLinksAndFormatting extends PremiumStoryFeature {
   const PremiumStoryFeatureLinksAndFormatting();

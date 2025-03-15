@@ -2,9 +2,8 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Loads quick reply shortcuts created by the current user. The loaded data
-/// will be sent through updateQuickReplyShortcut and
-/// updateQuickReplyShortcuts
+/// Loads quick reply shortcuts created by the current user. The loaded topics
+/// will be sent through updateQuickReplyShortcuts
 /// Returns [Ok]
 @immutable
 class LoadQuickReplyShortcuts extends TdFunction {

@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// Describes type of clickable area on a story media to be added
+/// Describes type of clickable rectangle area on a story media to be added
 @immutable
 abstract class InputStoryAreaType extends TdObject {
   const InputStoryAreaType();
@@ -11,12 +11,10 @@ abstract class InputStoryAreaType extends TdObject {
 
   /// Inherited by:
   /// [InputStoryAreaTypeFoundVenue]
-  /// [InputStoryAreaTypeLink]
   /// [InputStoryAreaTypeLocation]
   /// [InputStoryAreaTypeMessage]
   /// [InputStoryAreaTypePreviousVenue]
   /// [InputStoryAreaTypeSuggestedReaction]
-  /// [InputStoryAreaTypeWeather]
   static InputStoryAreaType? fromJson(Map<String, dynamic>? json) {
     if (json == null) {
       return null;
@@ -25,8 +23,6 @@ abstract class InputStoryAreaType extends TdObject {
     switch (json['@type']) {
       case InputStoryAreaTypeFoundVenue.constructor:
         return InputStoryAreaTypeFoundVenue.fromJson(json);
-      case InputStoryAreaTypeLink.constructor:
-        return InputStoryAreaTypeLink.fromJson(json);
       case InputStoryAreaTypeLocation.constructor:
         return InputStoryAreaTypeLocation.fromJson(json);
       case InputStoryAreaTypeMessage.constructor:
@@ -35,8 +31,6 @@ abstract class InputStoryAreaType extends TdObject {
         return InputStoryAreaTypePreviousVenue.fromJson(json);
       case InputStoryAreaTypeSuggestedReaction.constructor:
         return InputStoryAreaTypeSuggestedReaction.fromJson(json);
-      case InputStoryAreaTypeWeather.constructor:
-        return InputStoryAreaTypeWeather.fromJson(json);
       default:
         return null;
     }

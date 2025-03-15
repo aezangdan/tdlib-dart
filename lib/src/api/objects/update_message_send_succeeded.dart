@@ -10,10 +10,8 @@ class UpdateMessageSendSucceeded extends Update {
     required this.oldMessageId,
   });
 
-  /// [message] The sent message. Almost any field of the new message can be
-  /// different from the corresponding field of the original message. For
-  /// example, the field scheduling_state may change, making the message
-  /// scheduled, or non-scheduled
+  /// [message] The sent message. Usually only the message identifier, date, and
+  /// content are changed, but almost all other fields can also change
   final Message message;
 
   /// [oldMessageId] The previous temporary message identifier

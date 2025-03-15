@@ -2,8 +2,7 @@ import 'package:meta/meta.dart';
 import '../extensions/data_class_extensions.dart';
 import '../tdapi.dart';
 
-/// An invoice from a message of the type messageInvoice or paid media
-/// purchase from messagePaidMedia
+/// An invoice from a message of the type messageInvoice
 @immutable
 class InputInvoiceMessage extends InputInvoice {
   const InputInvoiceMessage({
@@ -14,8 +13,7 @@ class InputInvoiceMessage extends InputInvoice {
   /// [chatId] Chat identifier of the message
   final int chatId;
 
-  /// [messageId] Message identifier. Use messageProperties.can_be_paid to check
-  /// whether the message can be used in the method
+  /// [messageId] Message identifier
   final int messageId;
 
   static const String constructor = 'inputInvoiceMessage';

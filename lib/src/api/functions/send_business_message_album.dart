@@ -16,7 +16,6 @@ class SendBusinessMessageAlbum extends TdFunction {
     this.replyTo,
     required this.disableNotification,
     required this.protectContent,
-    required this.effectId,
     required this.inputMessageContents,
   });
 
@@ -37,12 +36,8 @@ class SendBusinessMessageAlbum extends TdFunction {
   /// from forwarding and saving
   final bool protectContent;
 
-  /// [effectId] Identifier of the effect to apply to the message
-  final int effectId;
-
   /// [inputMessageContents] Contents of messages to be sent. At most 10
-  /// messages can be added to an album. All messages must have the same value
-  /// of show_caption_above_media
+  /// messages can be added to an album
   final List<InputMessageContent> inputMessageContents;
 
   static const String constructor = 'sendBusinessMessageAlbum';
@@ -57,7 +52,6 @@ class SendBusinessMessageAlbum extends TdFunction {
         'reply_to': replyTo?.toJson(),
         'disable_notification': disableNotification,
         'protect_content': protectContent,
-        'effect_id': effectId,
         'input_message_contents':
             inputMessageContents.map((item) => item.toJson()).toList(),
         '@type': constructor,

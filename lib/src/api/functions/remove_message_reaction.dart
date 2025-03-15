@@ -18,8 +18,7 @@ class RemoveMessageReaction extends TdFunction {
   /// [messageId] Identifier of the message
   final int messageId;
 
-  /// [reactionType] Type of the reaction to remove. The paid reaction can't be
-  /// removed
+  /// [reactionType] Type of the reaction to remove
   final ReactionType reactionType;
 
   static const String constructor = 'removeMessageReaction';
